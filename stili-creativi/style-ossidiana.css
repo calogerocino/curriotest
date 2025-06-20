@@ -184,3 +184,63 @@ footer {
     .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
     .contact-list { flex-direction: column; text-align: center; gap: 1rem; }
 }
+
+/* --- Stili per Dettagli Espandibili (Timeline Ossidiana) --- */
+details {
+    margin-top: 1rem;
+}
+
+summary {
+    cursor: pointer;
+    list-style: none; /* Rimuove la freccia di default */
+    font-weight: 500;
+    color: var(--text-secondary);
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+summary::-webkit-details-marker {
+    display: none; /* Rimuove la freccia di default su Chrome/Safari */
+}
+
+summary:hover {
+    color: var(--accent-gold);
+}
+
+/* Indicatore '+' e '-' stilizzato */
+summary::before {
+    content: '+';
+    margin-right: 0.5rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+}
+
+details[open] > summary::before {
+    content: '−'; /* Meno stilizzato */
+}
+
+details ul {
+    margin-top: 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--border-color);
+    list-style-type: none;
+}
+
+details li {
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    position: relative;
+    color: var(--text-secondary);
+}
+
+/* "Pallino" dorato per ogni punto della lista */
+details li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em; /* Centra verticalmente */
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--accent-gold);
+}

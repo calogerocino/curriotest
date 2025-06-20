@@ -1,0 +1,268 @@
+/* --- Variabili e Stili Globali STILE MANOSCRITTO --- */
+:root {
+    --bg-color: #FDFBF7; /* Colore carta avorio */
+    --ink-color: #2c2b2a; /* Nero inchiostro, non assoluto */
+    --secondary-text: #6e6b66;
+    --highlight-bg: #FFF8B7; /* Giallo evidenziatore */
+    --border-color: #E5E1DA;
+    
+    --font-handwriting: 'Caveat', cursive;
+    --font-serif-body: 'Lora', serif;
+}
+
+body {
+    font-family: var(--font-serif-body);
+    font-size: 17px;
+    line-height: 1.8;
+    background-color: var(--bg-color);
+    color: var(--ink-color);
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Header */
+.main-header {
+    text-align: center;
+    padding: 3rem 0;
+}
+.main-header h1 {
+    font-family: var(--font-handwriting);
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+.main-header p {
+    font-size: 1.1rem;
+    color: var(--secondary-text);
+    margin-top: 0.5rem;
+}
+
+/* Sezioni */
+.content-section {
+    padding: 2rem 0;
+}
+h2 {
+    font-family: var(--font-handwriting);
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+/* Progetti */
+.project-item {
+    margin-bottom: 2.5rem;
+}
+.project-item h3 {
+    font-family: var(--font-handwriting);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+.tech-list {
+    margin-top: 1rem;
+}
+.tech-list span {
+    display: inline-block;
+    padding: 2px 8px;
+    margin: 0 5px 5px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: var(--secondary-text);
+}
+.highlight {
+    background-color: var(--highlight-bg);
+    padding: 0 2px;
+}
+
+/* Divisore tra sezioni */
+.divider {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 2rem 0;
+}
+
+/* Timeline */
+.timeline {
+    border-left: 2px solid var(--border-color);
+    padding-left: 1.5rem;
+}
+.timeline-item {
+    position: relative;
+    padding-bottom: 2rem;
+}
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+.timeline-item::before {
+    content: '•';
+    font-size: 2rem;
+    position: absolute;
+    left: -14px;
+    top: -12px;
+    color: var(--secondary-text);
+}
+.timeline-date {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+}
+.timeline-content h3 {
+    font-family: var(--font-serif-body);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+.company {
+    color: var(--secondary-text);
+    font-style: italic;
+    margin: 0;
+}
+
+/* Istruzione e Competenze */
+.education {
+    background-color: rgba(230, 225, 215, 0.3);
+    border-left: 3px solid var(--secondary-text);
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+}
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.skill-category h3 {
+    font-family: var(--font-handwriting);
+    font-size: 1.8rem;
+    margin: 0 0 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: var(--secondary-text);
+}
+
+/* Contatti */
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+a {
+    color: var(--ink-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+a:hover {
+    border-bottom-color: var(--ink-color);
+    background-color: var(--highlight-bg);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 3rem 0 2rem 0;
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+}
+
+/* --- Stili per i Dettagli Espandibili della Timeline --- */
+details {
+    margin-top: 1rem;
+}
+
+summary {
+    cursor: pointer;
+    font-family: var(--font-serif-body);
+    font-weight: 600;
+    color: var(--secondary-text);
+    transition: color 0.2s ease;
+    list-style: none; /* Rimuove la freccia di default */
+}
+
+summary:hover {
+    color: var(--ink-color);
+}
+
+summary::-webkit-details-marker {
+    display: none; /* Rimuove la freccia di default su Chrome/Safari */
+}
+
+summary::before {
+    content: '+'; /* Simbolo per indicare che si può espandere */
+    font-family: monospace;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    color: var(--secondary-text);
+}
+
+details[open] > summary::before {
+    content: '-'; /* Il simbolo cambia quando il dettaglio è aperto */
+}
+
+details ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    color: var(--secondary-text);
+    border-left: 1px solid var(--border-color);
+}
+
+details li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Stili per i Tab dei Progetti (Stile Manoscritto) --- */
+.project-tabs {
+    display: flex;
+    margin-left: -1px; /* Allinea i bordi */
+}
+
+.tab-button {
+    font-family: var(--font-handwriting);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-text);
+    padding: 0.5rem 1.5rem;
+    border: 1px solid var(--border-color);
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    background-color: #F6F3EE; /* Un colore leggermente diverso per la linguetta */
+    cursor: pointer;
+    margin-right: 5px;
+    position: relative;
+    top: 1px; /* Allinea con il bordo del contenitore */
+    transition: all 0.2s ease;
+}
+
+.tab-button:hover {
+    color: var(--ink-color);
+    background-color: #FFF;
+}
+
+.tab-button.active {
+    color: var(--ink-color);
+    background-color: var(--bg-color); /* Lo sfondo del tab attivo è uguale a quello della pagina */
+    border-color: var(--border-color);
+}
+
+.project-content-wrapper {
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    background-color: var(--bg-color);
+}
+
+.project-content {
+    display: none;
+}
+
+.project-content.active {
+    display: block;
+}

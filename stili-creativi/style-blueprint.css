@@ -236,3 +236,59 @@ footer {
     opacity: 1;
     transform: none;
 }
+/* --- Stili per Dettagli Espandibili (Timeline Blueprint) --- */
+details {
+    margin-top: 1rem;
+}
+
+summary {
+    cursor: pointer;
+    list-style: none; /* Rimuove la freccia di default */
+    font-weight: 500;
+    color: var(--highlight-yellow);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+summary::-webkit-details-marker {
+    display: none; /* Rimuove la freccia di default su Chrome/Safari */
+}
+
+summary:hover {
+    color: #fff;
+}
+
+/* Creazione di un'icona [+] custom */
+summary::before {
+    content: '[+]';
+    font-family: monospace;
+    font-weight: bold;
+    color: var(--highlight-yellow);
+}
+
+details[open] > summary::before {
+    content: '[-]';
+}
+
+details ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    border-left: 1px dashed var(--border-color);
+    list-style-type: none;
+}
+
+details li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    position: relative;
+}
+
+/* Aggiunge un ">" prima di ogni punto, stile terminale */
+details li::before {
+    content: '>';
+    position: absolute;
+    left: -1rem;
+    color: var(--highlight-yellow);
+}

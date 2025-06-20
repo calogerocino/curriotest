@@ -1,0 +1,250 @@
+/* --- Variabili e Stili Globali STILE SONORO --- */
+:root {
+    --bg-color: #121212;
+    --card-bg: #1E1E1E;
+    --text-primary: #EAEAEA;
+    --text-secondary: #A0A0A0;
+    --accent-cyan: #7DE5F9; /* Un ciano etereo */
+    --border-color: #2A2A2A;
+    
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'Roboto Mono', monospace;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-size: 18px;
+    line-height: 1.7;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Animazione di sfondo sottile */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.2;
+    animation: zoom 60s infinite alternate;
+    z-index: -1;
+}
+@keyframes zoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.5); }
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+}
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    margin-left: 2.5rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+.main-nav a:hover {
+    color: var(--text-primary);
+}
+
+/* Sezione Hero */
+.hero-section {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem 2rem;
+}
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+.hero-section p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 500px;
+    margin-bottom: 2rem;
+}
+.cta-button {
+    background: transparent;
+    border: 1px solid var(--accent-cyan);
+    color: var(--accent-cyan);
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.cta-button:hover {
+    background: var(--accent-cyan);
+    color: var(--bg-color);
+}
+
+/* Sezione Ascolta (Release Principale) */
+.featured-release-section {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 4rem 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+.release-artwork img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+.release-info .release-type {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--accent-cyan);
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+}
+.release-info h2 {
+    font-size: 2.8rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.release-info p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+.music-player iframe {
+    border-radius: 8px;
+}
+
+/* Sezione Discografia */
+.discography-section {
+    padding: 6rem 0;
+}
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.discography-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.release-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    text-align: center;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+.release-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-cyan);
+}
+.release-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+}
+.release-card h3 {
+    margin: 0;
+}
+.release-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0.25rem 0 0 0;
+}
+
+/* Sezione Profilo */
+.profile-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 6rem 0;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+}
+.profile-text {
+    padding-left: 2rem;
+}
+.profile-text h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+.skills-box {
+    padding: 0 2rem;
+    font-family: var(--font-mono);
+    font-size: 1rem;
+}
+.skills-box h3 {
+    color: var(--accent-cyan);
+    font-size: 1.2rem;
+}
+.skills-box strong {
+    color: var(--text-primary);
+}
+.skills-box p {
+    color: var(--text-secondary);
+}
+
+/* Sezione Contatti e Footer */
+.contact-section {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.contact-section p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+.contact-button {
+    font-size: 1.2rem;
+    color: var(--accent-cyan);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-cyan);
+    padding-bottom: 5px;
+}
+.main-footer {
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+}

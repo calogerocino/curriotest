@@ -3,154 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indice - Portfolio di Calogero Cino</title>
+    <title>Indice dei Portfolio di Calogero Cino</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
             --bg-color: #f4f7f6;
-            --text-color: #2c3e50;
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
             --card-bg: #ffffff;
-            --border-color: #e0e0e0;
-            --accent-color: #4e54c8;
+            --border-color: #e2e8f0;
+            --accent-color: #3182ce;
         }
-
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-color);
+            color: var(--text-primary);
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            padding: 2rem 1rem;
         }
-
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
         header {
             text-align: center;
-            padding: 3rem 1rem;
+            margin-bottom: 3rem;
         }
-
-        h1 {
+        header h1 {
             font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-weight: 800;
         }
-        
-        header p {
-            font-size: 1.1rem;
-            color: #7f8c8d;
-        }
-        
-        main {
-            flex-grow: 1;
+        /* Stili per la navigazione a TAB */
+        .tab-navigation {
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 1rem;
+            gap: 1rem;
+            margin-bottom: 2rem;
         }
-        
-        .link-container {
+        .tab-button {
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: 2px solid var(--border-color);
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .tab-button:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+        .tab-button.active {
+            background-color: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+        /* Contenuto dei TAB */
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        /* Griglia per le card */
+        .link-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1.5rem;
-            max-width: 1200px;
-            width: 100%;
         }
-
         .style-card {
             display: block;
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 2rem;
+            padding: 1.5rem;
             text-decoration: none;
-            color: var(--text-color);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            color: var(--text-primary);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
         .style-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            border-color: var(--accent-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
         }
-
         .style-card h2 {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             margin-top: 0;
+            margin-bottom: 0.5rem;
             color: var(--accent-color);
         }
-
         .style-card p {
             font-size: 1rem;
-            color: #555;
+            color: var(--text-secondary);
             margin-bottom: 0;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            color: #95a5a6;
-            font-size: 0.9rem;
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Portfolio di Calogero Cino</h1>
-        <p>Seleziona una versione del portfolio da visualizzare.</p>
-    </header>
+    <div class="main-container">
+        <header>
+            <h1>Indice dei Portfolio</h1>
+            <p>Seleziona una categoria per visualizzare i design disponibili.</p>
+        </header>
 
-    <main>
-        <div class="link-container">
-            <a href="default.html" class="style-card">
-                <h2>Stile Moderno</h2>
-                <p>Il design originale, pulito e professionale con un tocco di colore.</p>
-            </a>
-            
-            <a href="style-vintage.html" class="style-card">
-                <h2>Stile Vintage</h2>
-                <p>Un look retrò con toni seppia, texture di carta e font classici.</p>
-            </a>
-            
-            <a href="style-gemini.html" class="style-card">
-                <h2>Stile Gemini</h2>
-                <p>Dark mode, gradienti vivaci e un look iper-tecnologico.</p>
-            </a>
-
-            <a href="style-minimal.html" class="style-card">
-                <h2>Stile Minimalista</h2>
-                <p>Eleganza e chiarezza. Design pulito, lineare e senza distrazioni.</p>
-            </a>
-            
-            <a href="style-futuristic.html" class="style-card">
-                <h2>Stile Futuristico</h2>
-                <p>Un'interfaccia HUD con neon, griglie e un'atmosfera cyberpunk.</p>
-            </a>
-
-            <a href="style-ossidiana.html" class="style-card">
-                <h2>Stile Ossidiana</h2>
-                <p>Design unico, che comunica forza, professionalità e una rara attenzione ai dettagli.</p>
-            </a>
-
-            <a href="style-blueprint.html" class="style-card">
-                <h2>Stile Blueprint</h2>
-                <p>Non è più solo un curriculum, ma una narrazione dinamica delle tue capacità, un design che non solo contiene informazioni, ma le presenta in modo memorabile e coinvolgente.</p>
-            </a>
-
-            <a href="style-fashion.html" class="style-card">
-                <h2>Stile Fashion Designer</h2>
-                <p>Un design editoriale e minimalista che valorizza i lavori visivi con tipografia elegante e ampi spazi bianchi.</p>
-            </a>
+        <div class="tab-navigation">
+            <button class="tab-button active" data-target="tab-stili">Stili Creativi</button>
+            <button class="tab-button" data-target="tab-profili">Profili Professionali</button>
         </div>
-    </main>
-    
-    <footer>
-        <p>Tutti i design sono stati creati per Calogero Cino. © 2025</p>
-    </footer>
+
+        <div id="tab-stili" class="tab-content active">
+            <div class="link-grid">
+                <a href="stili-creativi/default.html" class="style-card">
+                    <h2>Default</h2>
+                    <p>Il design moderno e pulito da cui tutto è partito.</p>
+                </a>
+                <a href="stili-creativi/blueprint.html" class="style-card">
+                    <h2>Blueprint Dinamico</h2>
+                    <p>Un'esperienza interattiva con animazioni e un look da cianografia.</p>
+                </a>
+                <a href="stili-creativi/fashion.html" class="style-card">
+                    <h2>Fashion Atelier</h2>
+                    <p>Design strutturato per stilista, con estetica da moodboard.</p>
+                </a>
+                <a href="stili-creativi/futuristic.html" class="style-card">
+                    <h2>Futuristico</h2>
+                    <p>Interfaccia HUD con neon, griglie e un'atmosfera cyberpunk.</p>
+                </a>
+                 <a href="stili-creativi/gemini.html" class="style-card">
+                    <h2>Gemini</h2>
+                    <p>Stile d'impatto con dark mode, gradienti e angoli smussati.</p>
+                </a>
+                <a href="stili-creativi/manoscritto.html" class="style-card">
+                    <h2>Manoscritto</h2>
+                    <p>Un look intimo e artigianale, come un diario professionale.</p>
+                </a>
+                 <a href="stili-creativi/minimal.html" class="style-card">
+                    <h2>Minimalista</h2>
+                    <p>Massima chiarezza e leggibilità, dove il contenuto è re.</p>
+                </a>
+                <a href="stili-creativi/ossidiana.html" class="style-card">
+                    <h2>Ossidiana</h2>
+                    <p>Design lussuoso con un tema scuro e accenti dorati.</p>
+                </a>
+                <a href="stili-creativi/vintage.html" class="style-card">
+                    <h2>Vintage</h2>
+                    <p>Un'estetica retrò con toni seppia e texture di carta invecchiata.</p>
+                </a>
+            </div>
+        </div>
+
+        <div id="tab-profili" class="tab-content">
+            <div class="link-grid">
+                 <a href="profili-professionali/frontend-ide.html" class="style-card">
+                    <h2>1. Sviluppatore Front-End</h2>
+                    <p>Un design "IDE" con tema scuro, sidebar e accenti ispirati alla sintassi del codice.</p>
+                </a>
+                 <a href="profili-professionali/architetto-strutturale.html" class="style-card">
+                    <h2>2. Architetto</h2>
+                    <p>Stile "Strutturale" basato su griglie pulite, minimalismo e focus sui progetti visivi.</p>
+                </a>
+                <a href="profili-professionali/chef-materico.html" class="style-card">
+                    <h2>3. Chef / Pasticcere</h2>
+                    <p>Stile "Materico" con colori caldi e focus su foto di alta qualità per evocare sapori.</p>
+                </a>
+                <a href="profili-professionali/smm-dinamico.html" class="style-card">
+                    <h2>4. Social Media Manager</h2>
+                    <p>Design "Dinamico" con card, colori vibranti e focus sui risultati numerici (KPI).</p>
+                </a>
+                <a href="profili-professionali/fotografo-immersivo.html" class="style-card">
+                    <h2>5. Fotografo / Videomaker</h2>
+                    <p>Una "Galleria Immersiva" con tema scuro per dare massimo risalto a foto e video.</p>
+                </a>
+                 <a href="profili-professionali/trainer-energetico.html" class="style-card">
+                    <h2>6. Personal Trainer</h2>
+                    <p>Stile "Energetico" con colori d'impatto e focus su testimonianze e risultati.</p>
+                </a>
+                <a href="profili-professionali/musicista-atmosferico.html" class="style-card">
+                    <h2>7. Musicista / Produttore</h2>
+                    <p>Stile "Sonoro Atmosferico" con un design scuro e un player audio in primo piano.</p>
+                </a>
+                <a href="profili-professionali/designer-strategico.html" class="style-card">
+                    <h2>8. Graphic Designer</h2>
+                    <p>Design "Strategico-Editoriale" che racconta il processo dietro ogni case study.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Rimuove 'active' da tutti i pulsanti e contenuti
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Aggiunge 'active' al pulsante cliccato e al contenuto corrispondente
+                button.classList.add('active');
+                const targetId = button.getAttribute('data-target');
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+    </script>
 
 </body>
 </html>

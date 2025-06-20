@@ -1,0 +1,199 @@
+/* --- Variabili e Stili Globali STILE DIGITALE DINAMICO --- */
+:root {
+    --bg-color: #FFFFFF;
+    --light-gray: #F9FAFB;
+    --text-primary: #111827;
+    --text-secondary: #6B7280;
+    --accent-color: #FF5A5F; /* Un corallo vibrante */
+    --border-color: #E5E7EB;
+    
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header e Navigazione */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    margin-left: 2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+.main-nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Sezione Hero */
+.hero-section {
+    text-align: center;
+    padding: 6rem 1rem;
+}
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+.hero-section p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* Sezione Case Studies */
+.case-studies-section {
+    padding: 6rem 0;
+}
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.case-study {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+.case-study.reverse {
+    direction: rtl;
+}
+.case-study.reverse .case-study-info {
+    direction: ltr;
+}
+
+.case-study-info .category {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 99px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.case-study-info h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+.case-study-info p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    text-align: center;
+}
+.kpi-card {
+    background: var(--light-gray);
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+}
+.kpi-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent-color);
+}
+.kpi-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.case-study-visuals img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Sezione Servizi */
+.services-section {
+    background-color: var(--light-gray);
+    padding: 6rem 2rem;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.service-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 12px;
+}
+.service-card h3 { margin-top: 0; }
+.service-card p { color: var(--text-secondary); }
+
+/* Sezione Profilo e Contatti */
+.profile-contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 6rem 0;
+    align-items: center;
+}
+.profile-box h3, .contact-box h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+.email-link {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* Footer */
+.main-footer {
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+}

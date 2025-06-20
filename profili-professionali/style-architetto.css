@@ -1,0 +1,228 @@
+/* --- Variabili e Stili Globali STILE STRUTTURALE --- */
+:root {
+    --bg-color: #F9F9F9;
+    --text-primary: #1a1a1a;
+    --text-secondary: #737373;
+    --border-color: #E5E5E5;
+    
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Lora', serif;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.7;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header e Navigazione */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    margin-left: 2.5rem;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+.main-nav a:hover {
+    color: var(--text-primary);
+}
+
+/* Stili Generali Sezioni */
+section {
+    padding: 6rem 0;
+}
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--text-secondary);
+}
+.section-title-left {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+/* Sezione Progetti */
+.project-item {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+.project-item.reverse {
+    grid-template-columns: 1fr 1.5fr;
+}
+.project-item.reverse .project-image {
+    grid-column: 2;
+}
+.project-item.reverse .project-info {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.project-image img {
+    width: 100%;
+    display: block;
+    filter: saturate(0.9);
+}
+.project-info h3 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+.project-info p {
+    color: var(--text-secondary);
+    max-width: 500px;
+}
+.project-specs {
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+}
+.project-specs div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+}
+.project-specs dt {
+    font-weight: 700;
+}
+.project-specs dd {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+/* Sezione Profilo e Competenze */
+.profile-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    background-color: #fff;
+    padding: 4rem;
+    border: 1px solid var(--border-color);
+}
+.skills-box {
+    border-left: 1px solid var(--border-color);
+    padding-left: 4rem;
+}
+.skills-box h3, .skills-box h4 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.skills-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.skills-box h4 {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+.skills-box p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Sezione Percorso (Timeline) */
+.timeline {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.timeline li {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+}
+.timeline li:last-child {
+    border-bottom: none;
+}
+.timeline span {
+    font-family: var(--font-heading);
+    color: var(--text-secondary);
+    flex-basis: 150px;
+}
+.timeline strong {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    display: block;
+}
+
+/* Sezione Contatti e Footer */
+.contact-section {
+    text-align: center;
+}
+.contact-section h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.contact-section p {
+    color: var(--text-secondary);
+}
+.contact-section a {
+    font-size: 1.8rem;
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 2px solid var(--text-primary);
+}
+
+.main-footer {
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Media Query per Mobile */
+@media (max-width: 900px) {
+    .project-item, .project-item.reverse, .profile-section {
+        grid-template-columns: 1fr;
+    }
+    .skills-box {
+        border-left: none;
+        padding-left: 0;
+        margin-top: 2rem;
+        border-top: 1px solid var(--border-color);
+        padding-top: 2rem;
+    }
+    .timeline li {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

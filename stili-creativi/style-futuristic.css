@@ -183,3 +183,63 @@ footer {
 @media (max-width: 600px) {
     .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
 }
+
+/* --- Stili per Dettagli Espandibili (Timeline Futuristica) --- */
+details {
+    margin-top: 1rem;
+}
+
+summary {
+    cursor: pointer;
+    list-style: none; /* Rimuove la freccia di default */
+    font-weight: 700;
+    color: var(--glow-cyan);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+summary::-webkit-details-marker {
+    display: none; /* Rimuove la freccia di default su Chrome/Safari */
+}
+
+summary:hover {
+    color: #fff;
+    text-shadow: 0 0 5px var(--glow-cyan);
+}
+
+/* Indicatore [+] stile terminale */
+summary::before {
+    content: '[+]';
+    font-family: monospace;
+}
+
+details[open] > summary::before {
+    content: '[-]';
+}
+
+details ul {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    background: rgba(10, 25, 47, 0.3); /* Sfondo scuro e trasparente per il log */
+    list-style-type: none;
+}
+
+details li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+/* Aggiunge ">>" prima di ogni punto, stile datalog */
+details li::before {
+    content: '>>';
+    position: absolute;
+    left: 0;
+    color: var(--glow-cyan);
+}

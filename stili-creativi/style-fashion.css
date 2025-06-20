@@ -194,3 +194,44 @@ footer {
     color: var(--text-secondary);
     font-size: 0.9rem;
 }
+
+/* --- Stili per Dettagli Espandibili (Timeline Atelier) --- */
+details {
+    margin-top: 1rem;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--accent-color);
+    display: inline-block;
+    list-style: none; /* Rimuove la freccia di default */
+    transition: color 0.3s ease;
+}
+
+summary::-webkit-details-marker {
+    display: none; /* Rimuove la freccia di default su Chrome/Safari */
+}
+
+summary:hover {
+    color: var(--text-primary);
+}
+
+summary::after {
+    content: ' [+]';
+    font-family: monospace;
+}
+
+details[open] > summary::after {
+    content: ' [-]';
+}
+
+details ul {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    color: var(--text-secondary);
+}
+
+details li {
+    margin-bottom: 0.5rem;
+}   

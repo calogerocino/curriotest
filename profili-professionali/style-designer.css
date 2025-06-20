@@ -1,0 +1,192 @@
+/* --- Variabili e Stili Globali STILE STRATEGICO --- */
+:root {
+    --bg-color: #FFFFFF;
+    --text-primary: #111111;
+    --text-secondary: #666666;
+    --accent-red: #E53935;
+    --border-color: #F0F0F0;
+    
+    --font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 18px;
+    line-height: 1.7;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header e Navigazione */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.logo {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-primary);
+    margin-left: 2.5rem;
+    font-weight: 700;
+}
+
+/* Sezione Hero */
+.hero-section {
+    padding: 8rem 0;
+    text-align: center;
+}
+.hero-section h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.2;
+    max-width: 800px;
+    margin: 0 auto 1rem auto;
+}
+.hero-section p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Sezione Case Studies */
+#progetti {
+    padding-top: 2rem;
+}
+.section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.case-study {
+    padding: 4rem 0;
+    border-top: 1px solid var(--border-color);
+}
+.case-study-header {
+    margin-bottom: 3rem;
+}
+.case-study-header h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin: 0;
+}
+.project-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+}
+.case-study-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+.case-study-body h4 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--accent-red);
+    margin-bottom: 1rem;
+}
+.mockup-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.mockup-grid img {
+    width: 100%;
+    border: 1px solid var(--border-color);
+}
+
+/* Sezione Servizi */
+.services-section {
+    padding: 6rem 0;
+    background-color: #FAFAFA;
+    border-top: 1px solid var(--border-color);
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+.service-category h3 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    border-bottom: 2px solid var(--accent-red);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.service-category ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+/* Sezione Profilo (About) */
+.about-section {
+    padding: 6rem 0;
+    text-align: center;
+}
+.about-section h2 {
+    font-size: 2.5rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+}
+.about-section p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Sezione Contatti */
+.contact-section {
+    padding: 6rem 0;
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+    text-align: center;
+}
+.contact-section h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-red);
+    color: white;
+    padding: 14px 32px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+/* Footer */
+.main-footer {
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
