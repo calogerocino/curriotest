@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriò di Calogero Cino - Blueprint Dinamico</title>
+
+    <link rel="stylesheet" href="style-blueprint.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content animate-on-scroll fade-in">
+            <h1 class="glitch" data-text="Calogero Cino">Calogero Cino</h1>
+            <p class="header-subtitle">// ARCHITETTO DI SOLUZIONI DIGITALI //</p>
+        </div>
+        <div class="scroll-down-indicator">SCROLL</div>
+    </header>
+
+    <main class="container">
+
+        <section id="chi-sono" class="content-section animate-on-scroll fade-in">
+            <div class="section-title-container">
+                <span class="section-number">01</span>
+                <h2>Profilo</h2>
+            </div>
+            <p class="about-me-description">
+                Professionista con una solida base in informatica e ragioneria, ho trasformato la passione per la tecnologia in una carriera. Specializzato nello sviluppo web, nella gestione e-commerce e nella creazione di software gestionali, unisco competenze tecniche a un forte orientamento al problem solving. Autonomo, creativo e sempre pronto a imparare nuove tecnologie per raggiungere gli obiettivi.
+            </p>
+        </section>
+
+        <section id="progetti" class="horizontal-section">
+            <div class="section-title-container sticky-title animate-on-scroll fade-in">
+                <span class="section-number">02</span>
+                <h2>Progetti Selezionati</h2>
+            </div>
+            <div class="projects-container-wrapper">
+                <div class="projects-container">
+                    <div class="project-card animate-on-scroll slide-in-up">
+                        <h3>Gestionale Custom</h3>
+                        <p>Sviluppo software completo per la gestione integrata di vendite, ordini e-commerce, CRM e magazzini multipli in real-time.</p>
+                        <span class="tech-highlight">HTML / PHP / JS / MySQL</span>
+                    </div>
+                    <div class="project-card animate-on-scroll slide-in-up">
+                        <h3>SEO & Web Master</h3>
+                        <p>Gestione E-commerce su PrestaShop, ottimizzazione SEO on-page e off-page, content creation e fotoritocco con Photoshop.</p>
+                        <span class="tech-highlight">PrestaShop / SEO / Photoshop</span>
+                    </div>
+                    <div class="project-card animate-on-scroll slide-in-up">
+                        <h3>Gestionale 'PixelSmart'</h3>
+                        <p>Sviluppo di un gestionale basato su framework moderni, un progetto da autodidatta per esplorare nuove tecnologie scalabili.</p>
+                        <span class="tech-highlight">Angular / TypeScript</span>
+                    </div>
+                    <div class="project-card animate-on-scroll slide-in-up">
+                        <h3>Hardware Specialist</h3>
+                        <p>Riparazione PC a livello software e hardware, consulenza componenti e assemblaggio completo di postazioni fisse custom.</p>
+                        <span class="tech-highlight">Diagnostica / Assemblaggio</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="esperienze" class="content-section">
+             <div class="section-title-container animate-on-scroll fade-in">
+                <span class="section-number">03</span>
+                <h2>Percorso Professionale</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll slide-in-left">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2022 - Oggi</span>
+                        <h3>Addetto alle vendite</h3>
+                        <p class="company">Bruno spa, Catania</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll slide-in-left">
+                     <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2018 - 2022</span>
+                        <h3>SEO Management - Web Master</h3>
+                        <p class="company">VivaiScifoStore, San Cataldo (CL)</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll slide-in-left">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2011 - 2016</span>
+                        <h3>Diploma Ragioniere Informatico</h3>
+                        <p class="company">ITCG 'Mario Rapisardi', Caltanissetta</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contatti" class="content-section animate-on-scroll fade-in">
+            <div class="section-title-container">
+                <span class="section-number">04</span>
+                <h2>Contatti</h2>
+            </div>
+            <div class="contact-grid">
+                <a href="mailto:kalogero.cino97@gmail.com" class="contact-link">
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">kalogero.cino97@gmail.com</span>
+                </a>
+                <a href="tel:3452382733" class="contact-link">
+                    <span class="contact-label">Telefono</span>
+                    <span class="contact-value">345 2382733</span>
+                </a>
+                <a href="https://www.linkedin.com/in/calogero-cino-4a7333172" target="_blank" class="contact-link">
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-value">/calogero-cino</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Progetto #CC2025. Sviluppato con passione.</p>
+    </footer>
+
+    <script>
+        // Seleziona tutti gli elementi che devono essere animati
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+        // Crea un "osservatore" che controllerà quando un elemento entra nello schermo
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // Se l'elemento è visibile...
+                if (entry.isIntersecting) {
+                    // ...aggiungi la classe 'is-visible' per attivare l'animazione CSS
+                    entry.target.classList.add('is-visible');
+                    // E smetti di osservarlo per non ripetere l'animazione
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1 // L'animazione parte quando almeno il 10% dell'elemento è visibile
+        });
+
+        // Dice all'osservatore di iniziare a monitorare ogni elemento
+        animatedElements.forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>

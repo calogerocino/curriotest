@@ -1,0 +1,252 @@
+/* --- Variabili e Stili Globali --- */
+:root {
+    --primary-color: #4e54c8;
+    --secondary-color: #8f94fb;
+    --dark-color: #2c3e50;
+    --light-color: #ffffff;
+    --gray-color: #f4f7f6;
+    --text-color: #333;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    background-color: var(--gray-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-color);
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background-color: var(--light-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+}
+
+.icon {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+/* --- Header --- */
+header {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--light-color);
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    color: var(--light-color);
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* --- Sezione Progetti --- */
+.project-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 1.5rem 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.tab-button {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: #e9e9e9;
+    border-color: #aaa;
+}
+
+.tab-button.active {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-color: var(--primary-color);
+}
+
+.project-content {
+    display: none; /* Nasconde tutti i contenuti dei progetti */
+}
+
+.project-content.active {
+    display: block; /* Mostra solo quello attivo */
+}
+
+.project-content h3 {
+    margin-top: 0;
+}
+
+/* --- Timeline Esperienze e Formazione --- */
+.timeline {
+    position: relative;
+    padding: 1rem 0;
+}
+/* La linea verticale della timeline */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    height: 100%;
+    width: 3px;
+    background-color: #e0e0e0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 22px;
+    height: 22px;
+    background-color: var(--light-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+}
+
+.timeline-date {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.timeline-content h3 {
+    margin: 5px 0;
+    font-size: 1.2rem;
+}
+.company {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+details summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+details ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* --- Competenze Tecniche --- */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background-color: var(--gray-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #ddd;
+}
+
+/* --- Sezione a due colonne (Soft Skills & Lingue) --- */
+.two-columns-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.two-columns-section ul {
+    padding-left: 20px;
+}
+.patente {
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* --- Sezione Chi Sono --- */
+#chi-sono {
+    text-align: center;
+}
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--light-color);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+}
+.about-me-description {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* --- Contatti e Footer --- */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+.contact-list li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+.contact-list a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--dark-color);
+    color: #ccc;
+}
+footer p {
+    margin: 0;
+}
+.footer-credit {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* --- Adattabilità per schermi piccoli (Mobile) --- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    .two-columns-section {
+        grid-template-columns: 1fr; /* Le colonne diventano una sola */
+    }
+}

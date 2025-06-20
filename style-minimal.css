@@ -1,0 +1,193 @@
+/* --- Variabili e Stili Globali MINIMALISTI --- */
+:root {
+    --bg-color: #ffffff;
+    --text-primary: #212529; /* Un grigio quasi nero per massima leggibilità */
+    --text-secondary: #6c757d; /* Un grigio più chiaro per i dettagli */
+    --border-color: #dee2e6; /* Un bordo molto leggero */
+    --font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 16px; /* Dimensione base per la leggibilità */
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    margin: 0;
+    -webkit-font-smoothing: antialiased; /* Migliora il rendering del testo */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Header pulito */
+header {
+    text-align: center;
+    padding: 4rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+.header-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+}
+
+/* Sezioni di contenuto, separate da una linea */
+.content-section {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.content-section:last-of-type {
+    border-bottom: none; /* L'ultima sezione non ha il bordo sotto */
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em; /* Spaziatura tra le lettere per un look raffinato */
+    margin-bottom: 2rem;
+}
+h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* Stile dei tab dei progetti, ultra-minimalista */
+.project-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Più spazio tra i pulsanti */
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+}
+
+.tab-button {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+.tab-button:hover {
+    color: var(--text-primary);
+}
+.tab-button.active {
+    color: var(--text-primary);
+    font-weight: 700;
+    box-shadow: 0 2px 0 0 var(--text-primary); /* Sottolineatura per l'elemento attivo */
+}
+
+.project-content { display: none; }
+.project-content.active { display: block; }
+.project-content p:last-child { margin-bottom: 0; }
+.project-content strong { color: var(--text-primary); font-weight: 500; }
+
+/* Timeline lineare, senza fronzoli */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.timeline-item {
+    display: grid;
+    grid-template-columns: 150px 1fr; /* Colonna fissa per la data */
+    gap: 1.5rem;
+}
+.timeline-date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.timeline-content {
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--border-color);
+}
+.company {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+details summary {
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+details ul {
+    margin-top: 1rem;
+    padding-left: 20px;
+    color: var(--text-secondary);
+}
+
+/* Competenze: un semplice paragrafo */
+.skills-grid p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* Sezione Chi Sono */
+.about-me-description {
+    font-size: 1.1rem; /* Testo leggermente più grande per la bio */
+}
+
+/* Lista Contatti */
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+.contact-list li {
+    margin-bottom: 0.5rem;
+}
+.contact-list strong {
+    color: var(--text-secondary);
+    display: inline-block;
+    width: 80px; /* Allinea le etichette */
+}
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--text-primary);
+    transition: color 0.2s, border-bottom-color 0.2s;
+}
+a:hover {
+    color: var(--text-secondary);
+    border-bottom-color: var(--text-secondary);
+}
+
+/* Footer essenziale */
+footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Adattabilità per schermi piccoli */
+@media (max-width: 600px) {
+    .timeline-item {
+        grid-template-columns: 1fr; /* Le colonne diventano una sola */
+        gap: 0.5rem;
+    }
+    .timeline-content {
+        padding-left: 0;
+        border-left: none;
+    }
+}

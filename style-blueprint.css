@@ -1,0 +1,238 @@
+/* --- Variabili e Stili Globali BLUEPRINT --- */
+:root {
+    --bg-color: #111827; /* Blu cianografia scuro */
+    --text-primary: #F3F4F6;
+    --text-secondary: #9CA3AF;
+    --highlight-yellow: #FBBF24; /* Giallo evidenziatore */
+    --border-color: rgba(251, 191, 36, 0.2);
+    --card-bg: rgba(31, 41, 55, 0.5);
+    --font-family: 'Inter', sans-serif;
+}
+
+/* --- Setup di Base e Sfondo --- */
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    margin: 0;
+    /* Sfondo a griglia sottile */
+    background-image: 
+        linear-gradient(rgba(156, 163, 175, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(156, 163, 175, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* --- Header e Animazione Glitch --- */
+.main-header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.glitch {
+    position: relative;
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.header-subtitle {
+    color: var(--highlight-yellow);
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+}
+.scroll-down-indicator {
+    position: absolute;
+    bottom: 2rem;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+}
+
+/* --- Stili per Sezioni e Titoli --- */
+.content-section {
+    padding: 6rem 0;
+}
+.section-title-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+.section-number {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--highlight-yellow);
+    border: 1px solid var(--highlight-yellow);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+.about-me-description {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 800px;
+}
+
+/* --- Sezione Progetti Orizzontale --- */
+.horizontal-section {
+    padding: 6rem 0;
+}
+.sticky-title {
+    position: sticky;
+    top: 6rem;
+    z-index: 1;
+}
+.projects-container-wrapper {
+    overflow-x: auto;
+    /* Stile per la scrollbar (opzionale ma consigliato) */
+    scrollbar-width: thin;
+    scrollbar-color: var(--highlight-yellow) var(--bg-color);
+}
+.projects-container-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+.projects-container-wrapper::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+.projects-container-wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--highlight-yellow);
+    border-radius: 4px;
+}
+
+.projects-container {
+    display: flex;
+    width: max-content; /* Permette al contenitore di espandersi */
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+.project-card {
+    width: 350px;
+    height: 250px;
+    background: var(--card-bg);
+    border: 1px dashed var(--border-color);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+.project-card:hover {
+    border-style: solid;
+    border-color: var(--highlight-yellow);
+    transform: translateY(-10px);
+}
+.project-card h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--text-primary);
+}
+.project-card p {
+    color: var(--text-secondary);
+}
+.tech-highlight {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--highlight-yellow);
+}
+
+/* --- Timeline --- */
+.timeline {
+    border-left: 2px dashed var(--border-color);
+    padding-left: 2rem;
+}
+.timeline-item {
+    position: relative;
+    padding: 1rem 0 2rem 2rem;
+}
+.timeline-marker {
+    position: absolute;
+    left: -33px; /* Posiziona il marker sulla linea */
+    top: 1rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    border: 3px solid var(--highlight-yellow);
+}
+.timeline-date {
+    font-weight: 700;
+    color: var(--highlight-yellow);
+}
+.timeline-content h3 { font-size: 1.25rem; margin: 0.25rem 0; }
+.company { color: var(--text-secondary); }
+
+/* --- Contatti --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+.contact-link {
+    display: block;
+    padding: 1.5rem;
+    border: 1px dashed var(--border-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.contact-link:hover {
+    border-color: var(--highlight-yellow);
+    background: var(--card-bg);
+}
+.contact-label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+.contact-value {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* --- CLASSI PER LE ANIMAZIONI --- */
+/* Stato iniziale: elementi nascosti */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in {
+    opacity: 0;
+}
+.slide-in-left {
+    transform: translateX(-50px);
+}
+.slide-in-up {
+    transform: translateY(50px);
+}
+/* Stato finale: elementi visibili quando la classe .is-visible viene aggiunta */
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: none;
+}
